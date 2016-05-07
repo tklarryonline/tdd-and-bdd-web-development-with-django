@@ -22,8 +22,6 @@ You will also learn:
 * To use CSS Frameworks to make your web application look neat without any hassle.
 * To deploy your app to Heroku and show it to your friends.
 
-Okay? Let's start!
-
 ## Conventions used in this tutorial
 
 Throughout this tutorial, we use code blocks like the following:
