@@ -1,3 +1,3 @@
-# My Awesome Book
+# TDD and BDD Web Development with Django
 
-This file file serves as your book's preface, a great place to describe your book's content and ideas.
+We hope that we could make you love Django and Web technologies as much as we do.
