@@ -140,50 +140,70 @@ eval "$(pyenv virtualenv-init -)"
 
 Create a new virtualenv (this will create virtualenv directory in `/path/to/.pyenv/versions)
 
-    $ pyenv virtualenv 2.7.11 django_venv  # we can drop Python version argument here if we want to create virtualenv with current active Python
+```
+$ pyenv virtualenv 2.7.11 django_venv  # we can drop Python version argument here if we want to create virtualenv with current active Python
+```
 
 List virtualenvs
 
-    $ pyenv virtualenvs
-    * django_venv (created from /path/to/.pyenv/versions/2.7.11)
+```sh
+$ pyenv virtualenvs
+* django_venv (created from /path/to/.pyenv/versions/2.7.11)
+```
 
 Activate/Deactivate virtualenv
 
-    $ pyenv activate django_venv
-    $ pyenv deactivate
+```
+$ pyenv activate django_venv
+$ pyenv deactivate
+```
 
 Delete virtualenv
 
-    $ pyenv uninstall django_venv
+```
+$ pyenv uninstall django_venv
+```
 
-###1.4.2. Option 2: Installing pyenv-virtualenvwrapper
+### Option 2: Installing pyenv-virtualenvwrapper
 
 Clone pyenv-virtualenvwrapper into pyenv's plugins directory
 
-    $ git clone https://github.com/yyuu/pyenv-virtualenvwrapper.git ~/.pyenv/plugins/pyenv-virtualenvwrapper
+```
+$ git clone https://github.com/yyuu/pyenv-virtualenvwrapper.git ~/.pyenv/plugins/pyenv-virtualenvwrapper
+```
 
 Add these lines after pyenv configuration in `~/.bashrc` (or `~/.zshrc`) and restart shell.
 
-    export WORKON_HOME=$HOME/.virtualenvs
-    pyenv virtualenvwrapper
+```
+export WORKON_HOME=$HOME/.virtualenvs
+pyenv virtualenvwrapper
+```
 
 #### Usage:
 
 Create a new virtualenv (this will create virtualenv directory in `~/.virtualenvs`)
 
-    $ pyenv shell 2.7.11  # switch to Python version that you want to create virtualenv
-    $ mkvirtualenv django_venv
+```
+$ pyenv shell 2.7.11  # switch to Python version that you want to create virtualenv
+$ mkvirtualenv django_venv
+```
 
 List virtualenvs
 
-    $ lsvirtualenv -b
-    django_venv
+```
+$ lsvirtualenv -b
+django_venv
+```
 
 Activate/Deactivate virtualenv
 
-    $ workon django_venv
-    $ deactivate
+```
+$ workon django_venv
+$ deactivate
+```
 
 Delete virtualenv
 
-    $ rmvirtualenv django_venv
+```
+$ rmvirtualenv django_venv
+```
