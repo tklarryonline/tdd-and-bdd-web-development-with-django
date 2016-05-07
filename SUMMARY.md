@@ -4,6 +4,7 @@
 * [Get started with Django](get-started-with-django.md)
 * Setup your databases
 * Deploy sooner, easier later
-* [Serving the homepage, TDD style](serving-homepage-tdd.md)
+* [Serving the homepage, Test-driven Development style](serving-homepage-tdd.md)
 * Add a pinch of style
-* 
+* Stepping into Behavior-driven Development
+* Continuous integration!
