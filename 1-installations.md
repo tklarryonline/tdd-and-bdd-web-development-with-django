@@ -102,7 +102,7 @@ You can check if Python 3.5.1 is installed and used as default Python in a new s
 ```sh
 $ pyenv versions
   system
-* 2.7.11 (set by /path/to/.pyenv/version)
+* 3.5.1 (set by /path/to/.pyenv/version)
 ```
 
 ## Install virtualenv
@@ -141,14 +141,14 @@ eval "$(pyenv virtualenv-init -)"
 Create a new virtualenv (this will create virtualenv directory in `/path/to/.pyenv/versions)
 
 ```
-$ pyenv virtualenv 2.7.11 django_venv  # we can drop Python version argument here if we want to create virtualenv with current active Python
+$ pyenv virtualenv 3.5.1 django_venv  # we can drop Python version argument here if we want to create virtualenv with current active Python
 ```
 
 List virtualenvs
 
 ```sh
 $ pyenv virtualenvs
-* django_venv (created from /path/to/.pyenv/versions/2.7.11)
+* django_venv (created from /path/to/.pyenv/versions/3.5.1)
 ```
 
 Activate/Deactivate virtualenv
@@ -184,7 +184,7 @@ pyenv virtualenvwrapper
 Create a new virtualenv (this will create virtualenv directory in `~/.virtualenvs`)
 
 ```
-$ pyenv shell 2.7.11  # switch to Python version that you want to create virtualenv
+$ pyenv shell 3.5.1  # switch to Python version that you want to create virtualenv
 $ mkvirtualenv django_venv
 ```
 
