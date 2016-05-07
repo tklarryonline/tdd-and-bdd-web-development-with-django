@@ -39,6 +39,7 @@ You can check the Django version by:
 
 ```sh
 $ django-admin --version
-1.9.6  # At the writing time of this tutorial
+1.9.6
 ```
 
+`1.9.6` is the latest Django version at the writing time of this tutorial.
