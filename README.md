@@ -48,6 +48,10 @@ Quotes are for notes, warning and tips, and tiny jokes.
 
 We can also use tables to summarize our ideas or information in a handy way.
 
+## Following this tutorial
+
+We recommend that you use Mac OS X or Linux to follow this tutorial. Windows makes it hard to install and start any Python projects. Thus, please consider carefully before choosing to use Windows for development.
+
 ## About and contributing
 
 This tutorial is being actively maintained by [Luan Nguyen](https://github.com/tklarryonline). Should you find any mistakes or want to contribute your ideas, please submit an Issue or Pull Request to [this repository](https://github.com/tklarryonline/tdd-and-bdd-web-development-with-django).
