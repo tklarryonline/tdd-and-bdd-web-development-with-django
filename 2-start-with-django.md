@@ -9,14 +9,14 @@ Django developers have different opinions about what they consider best practice
 Our layouts at the highest level (the repository root) are:
 
 ```
-<repo_dir>/
+<repo_dir>/  # Should be django_bookshelves in our case
     <django_project_root>/
         <django_configs_root>
 ```
 
 Generally, here are the functions of each level:
 
-* **`repo_dir`**: The project folder, where you initialized your Git repo.
+* **`repo_dir`**: The project folder, where you initialized your Git repo (which should be `django_bookshelves` in our case).
   * Place critical components like **Readme.md**, **.gitignore**, **requirements.txt files**
   * Store important files required for deployment.
 * **`django_project_root`**: The root of the actual Django project.
@@ -27,7 +27,7 @@ Now, we will start implementing our Bookshelves project with our preferences abo
 
 ## Install Django
 
-Let's start by creating your own virtualenv — say `django-bookshelves` — and activate it. Our work will be **mainly in** this virtualenv.
+Let's start by creating your own virtualenv — say `django-bookshelves` — and activate it. Make sure that you work **mainly in** this virtualenv.
 
 Then we can install Django by running:
 
