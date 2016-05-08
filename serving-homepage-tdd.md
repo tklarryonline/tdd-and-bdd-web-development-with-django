@@ -143,7 +143,7 @@ class IndexViewTestCase(TestCase):
     def test_homepage_is_alive(self):
         response = self.client.get(reverse('core:index'))
 
-        self.assertEqual(response.status_code, 200)
+        self.assertContains(response=response, text='Hey there! Welcome to Bookshelves community!')
 ```
 
 Run this test at the whereabouts of our `manage.py` by this command `python manage.py test`. You will see this
