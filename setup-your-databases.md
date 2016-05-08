@@ -63,7 +63,7 @@ your_master_account_name=# <== Where you can write SQL commands.
 Grant this `django_bookshelves` user all privileges on the newly created database using the `grant` SQL command.
 
 ```
-# grant all privileges on database django_bookshelves to django_bookshelves;
+=# grant all privileges on database django_bookshelves to django_bookshelves;
 ```
 
 Now, any database clients can connect to your database by the account above using this simple URL:
@@ -94,9 +94,50 @@ DATABASES = {
 }
 ```
 
-Then set the `DATABASE_URL` environment variable in your `.env` file to what we had in the last section.
+Then set the `DATABASE_URL` environment variable in your `.env` file to what we had in the above section.
 
 ```sh
 # .env
 DATABASE_URL=postgres://django_bookshelves:<your_password>@localhost/django_bookshelves
 ```
+
+Now you can run the first migration to test that the connection works and make your `django_bookshelves` database is up-to-date with your Django project.
+
+```sh
+$ python bookshelves/manage.py migrate
+# If you're seeing the messages below, you have set it up correctly
+Operations to perform:
+  Apply all migrations: contenttypes, auth, admin, sessions
+Running migrations:
+  Rendering model states... DONE
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying sessions.0001_initial... OK
+```
+
+Let's run the server again to make sure everything works.
+
+```sh
+$ python bookshelves/manage.py runserver
+Performing system checks...
+
+System check identified no issues (0 silenced).
+May 08, 2016 - 08:49:54
+Django version 1.9.6, using settings 'bookshelves_config.settings.development'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+```
+
+Well done! Now, let's finish our work by commit the new changes. You should know how to do a Git commit now, do you? Write your own commit message to what we have done here, and... phew!
+
+> Don't forget to `git push`  
+> — Luan
