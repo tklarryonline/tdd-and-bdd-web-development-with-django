@@ -223,7 +223,7 @@ class IndexView(View):
 Run the test now and you will see that it passed!
 
 ```sh
-python manage.py test
+$ python manage.py test
 Creating test database for alias 'default'...
 .
 ----------------------------------------------------------------------
