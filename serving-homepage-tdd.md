@@ -207,7 +207,15 @@ Traceback (most recent call last):
 ImportError: No module named 'core.views.index_view'
 ```
 
-Right! Because we haven't created `index_view` module! Let's make it right away
+Right! Because we haven't created `index_view` module! Let's make it right away in the `views` folder
 
 ```py
+# core/views/index_view.py
+from django.http.response import HttpResponse
+from django.views.generic import View
+
+
+class IndexView(View):
+    def get(self, request, *args, **kwargs):
+        return HttpResponse('Hey there! Welcome to Bookshelves community!')
 ```
