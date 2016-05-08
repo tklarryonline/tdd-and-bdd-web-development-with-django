@@ -100,3 +100,21 @@ In the future, we can add more apps into each category and don't have to worry a
 
 Now you can commit the new changes to reflect the creation of our new app.
 
+### Extend the app structure
+
+The generated app structure doesn't suite for an extensible app. Thus, we prefer changing it to:
+
+```
+core/
+├── __init__.py
+├── apps.py
+├── migrations/
+│   ├── __init__.py
+├── tests/
+│   ├── __init__.py
+└── views/
+    ├── __init__.py
+```
+
+Moreover, since we have no need for models and admin functions in this `core` app at the moment, we have got rid of `models.py` and `admin.py` files.
+
