@@ -125,7 +125,7 @@ Now you can commit the new changes to reflect the creation of our new app.
 
 Before doing anything, let's learn a bit about Test-driven Development by reading this [Newbie's Guide](http://code.tutsplus.com/tutorials/the-newbies-guide-to-test-driven-development--net-13835) from Tutsplus.
 
-### Write your first test
+### Write your first test and make it passed
 
 Since we're going to serve the homepage, which is conventionally defined in a class `IndexView`, we will write our expectations for it first in the form of `TestCase`.
 
@@ -196,7 +196,7 @@ urlpatterns = [
 Rerun the test. This time, the error changes to
 
 ```sh
-python manage.py test
+$ python manage.py test
 Creating test database for alias 'default'...
 E
 ======================================================================
@@ -218,4 +218,17 @@ from django.views.generic import View
 class IndexView(View):
     def get(self, request, *args, **kwargs):
         return HttpResponse('Hey there! Welcome to Bookshelves community!')
+```
+
+Run the test now and you will see that it passed!
+
+```sh
+python manage.py test
+Creating test database for alias 'default'...
+.
+----------------------------------------------------------------------
+Ran 1 test in 0.015s
+
+OK
+Destroying test database for alias 'default'...
 ```
