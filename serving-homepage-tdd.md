@@ -49,6 +49,7 @@ django_bookshelves
 │   │   ├── admin.py
 │   │   ├── apps.py
 │   │   ├── migrations/
+│   │   ├── models.py
 │   │   ├── tests.py
 │   │   └── views.py
 │   ├── manage.py
@@ -59,3 +60,43 @@ django_bookshelves
     ├── dev.txt
     └── production.txt
 ```
+
+### Tell Django about this app
+
+Now we should tell Django to use our new `core` app by editing the `INSTALLED_APPS` settings. Since we will add more apps in the future and install more third-party apps for new functions, we will restructure the `INSTALLED_APPS` settings as followed.
+
+```py
+# bookshelves_config/settings/base.py
+# Old INSTALLED_APPS
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+]
+
+# Now, to our brand new INSTALLED_APPS
+DJANGO_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+]
+
+THIRD_PARTY_APPS = []
+
+LOCAL_APPS = [
+    'core',
+]
+
+INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
+```
+
+In the future, we can add more apps into each category and don't have to worry about their mixing together.
+
+Now you can commit the new changes to reflect the creation of our new app.
+
