@@ -232,3 +232,9 @@ Ran 1 test in 0.015s
 OK
 Destroying test database for alias 'default'...
 ```
+
+### Display your homepage with basic HTML templates
+
+#### The recommended Django templates structure
+
+#### 
